@@ -1,2 +1,7 @@
+title: Jekyll SEO Tag
+
+url: xkdash.github.io
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
