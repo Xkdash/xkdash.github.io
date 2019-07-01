@@ -36,7 +36,7 @@
 }
 
 .text {
-  background-color: #4CAF50;
+  background-color: #0274D1;
   opacity: 0.8;
   color: white;
   font-size: 20px;
@@ -54,22 +54,21 @@
 	</style>
 </head>
 
-<body>
-
+<body bgcolor="black" text="white">
 <!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px; background-color: black;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Works</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  class="w3-bar-item w3-button"><h4>Close Menu</h4></a>
+  <a href="#works" onclick="w3_close()" class="w3-bar-item w3-button"><h4>Works</h4></a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><h4>About</h4></a>
 </nav>
 
 <!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  <div class="w3-black w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Mail</div>
-    <div class="w3-center w3-padding-16">My Works</div>
+    <div class="w3-right w3-padding-16"><h4>Mail</h4></div>
+    <div class="w3-center w3-padding-16"><h1>My Works</h1></div>
   </div>
 </div>
   
@@ -87,7 +86,7 @@
    		 <a href="wannacry.html"><div class="text">Learn more.</div></a>
   	 </div>
   	
-      <h3>Wanna Cry</h3>
+      <h4><b>Wanna Cry</b></h4>
       <p>This is a survey report on a ransomware that almost broke the internet in just 3 days after its outbreak in 2017. </p>
     </div>  	
     </div>
@@ -99,7 +98,7 @@
       <div class="overlay">
       <a href="xkerberos.html"><div class="text">Learn more.</div></a>
   	 </div>
-      <h3>XKerberos</h3>
+      <h4><b>XKerberos</b></h4>
       <p>A Three factor Authentication mechanism inspired by Kerberos.</p>
     </div>
 </div> 
@@ -111,8 +110,8 @@
       <div class="overlay">
       <a href="spoofing.html"><div class="text">Learn more.</div></a>
   	 </div>
-      <h3>Email Spoofing Confirmation</h3>
-      <p>Here is a small demonstration on how to check whether an email is spoofed or not.</p>
+      <h4><b>Checking Spoofed Emails</b></h4>
+      <p>Here is a small demonstration to decide whether an email is spoofed or not.</p>
     </div>
 </div>
 
@@ -124,33 +123,36 @@
    		 <a href="homenetwork.html"><div class="text">Learn more.</div></a>
   	 </div>
   	
-      <h3>Home Network</h3>
+      <h4><b>Home Network</b></h4>
       <p>This is an example of how our houses are connected to various devices through different protocols. </p>
     </div>  	
     </div>
 
-  <!-- Second Photo Grid-->
+  <!-- Second Photo Grid
   <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-quarter">
       <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
       <h3>All I Need Is a Popsicle</h3>
       <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+    </div>-->
+    <!--
     <div class="w3-quarter">
       <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
       <h3>Salmon For Your Skin</h3>
       <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+    </div> -->
+    <!--
     <div class="w3-quarter">
       <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
       <h3>The Perfect Sandwich, A Real Classic</h3>
       <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+    </div> -->
+    <!--
     <div class="w3-quarter">
       <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
       <h3>Le French</h3>
       <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+    </div>-->
   </div>
 
   <!-- Pagination -->
