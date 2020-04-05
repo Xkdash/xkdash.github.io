@@ -536,12 +536,13 @@ canvas {
 <br>
 
 <script>
-
+var myName=prompt("Please enter your name");
 var myGameArea;
 var myGamePiece;
 var myObstacles = [];
 var myscore;
-var highestscore;
+var highestscore=0;
+
 function restartGame() {
 document.getElementById("myfilter").style.display = "none";
 document.getElementById("myrestartbutton").style.display = "none";
@@ -550,7 +551,7 @@ myGameArea.clear();
 myGameArea = {};
 myGamePiece = {};
 myObstacles = [];
-if(highestscore<myscore.score){highestscore=myscore.score}
+if(myscore.score>highestscore){highestscore=myscore.score}
 myscore = {};
 document.getElementById("canvascontainer").innerHTML = "";
 startGame()
@@ -560,7 +561,6 @@ function startGame() {
     myGameArea = new gamearea();
     myGamePiece = new component(30, 30, "red", 10, 75);
     myscore = new component("15px", "Consolas", "black", 220, 25, "text");
-    highestscore=0
     myGameArea.start();
 }
 
@@ -591,7 +591,7 @@ function component(width, height, color, x, y, type) {
         this.text = color;
     }
     this.score = 0;    this.width = width;
-    this.highestscore=0
+    
     this.height = height;
     this.speedX = 0;
     this.speedY = 0;    
@@ -632,7 +632,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
             if(myscore.score>highestscore){highestscore=myscore.score}
-            alert("Your Score is: "+myscore.score+"\n"+"Highest Score: "+highestscore)
+            alert(myName+", your score is: "+myscore.score+"\n"+"Highest Score: "+highestscore)
             document.getElementById("myfilter").style.display = "block";
             document.getElementById("myrestartbutton").style.display = "block";
             return;
