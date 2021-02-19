@@ -1,104 +1,38 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-<!-- Google Tag Manager --> 
-<script async="" src="ucd_files/gtm.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T8T4BMS');</script> 
-<!-- End Google Tag Manager -->
-        
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet prefetch" href="ucd_files/css.css">
+    <link href="ucd_files/loader.css" rel="stylesheet" id="loader-css">
     <title>University of Colorado Denver | Anschutz Medical Campus systems login</title>
-    <link rel="icon" href="https://passport.ucdenver.edu/favicon.ico">
-    <link rel="shortcut icon" href="https://passport.ucdenver.edu/favicon.ico">
+    <link rel="icon" href="https://login.ucdenver.edu/favicon.ico">
+    <link rel="shortcut icon" href="https://login.ucdenver.edu/favicon.ico">
     <link rel="stylesheet" href="ucd_files/bootstrap.css">
     <link rel="stylesheet" href="ucd_files/Login-Form-Clean.css">
     <link rel="stylesheet" href="ucd_files/styles.css">
-
-    <script>
-        var forwardURL = "";
-        var cleanedReferrer = document.referrer.split('/')[2];
-        var searchResultsReferrer = ["www.google.com", "www.bing.com", "search.yahoo.com", "www.ask.com"]
-
-//            alert ("REFERRER DETAILS HERE: " + document.referrer);
-//            alert ("CLEANED: " + cleanedReferrer);
-
-        // IF no referrer then send to servicelist.php
-//            if(document.referrer === "")
-        if( (document.referrer === "") || (searchResultsReferrer.indexOf(cleanedReferrer) >= 0) )
-        {
-            forwardURL = "/servicelist.php";
-
-            if (cleanString(getUrlParameter("page").length) > 0)
-            {
-                forwardURL = "/" + getUrlParameter("page");
-            }
-        }
-
-        if (forwardURL != "")
-        {
-//                alert("Redirecting to: " + forwardURL);
-            window.location.href = forwardURL;
-        }
-
-        function getUrlParameter(sParam)
-        {
-            var returnVal = "";
-            var sPageURL = window.location.search.substring(1);
-            var sURLVariables = sPageURL.split('&');
-            for (var i = 0; i < sURLVariables.length; i++)
-            {
-                var sParameterName = sURLVariables[i].split('=');
-                if (sParameterName[0] == sParam)
-                {
-                    returnVal = sParameterName[1];
-//                        returnVal = decodeURIComponent(decodeURIComponent(sParameterName[1]));
-                }
-            }
-            return(returnVal)
-        }
-
-        function cleanString(string)
-        {
-            return decodeURIComponent(decodeURIComponent(string))
-        }
-    </script>
-</head>
-<body>
-    
-<!-- Google Tag Manager (noscript) --> 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8T4BMS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
-<!-- End Google Tag Manager (noscript) -->
-        
-    <div class="login-clean">
-        <form action="/oam/server/auth_cred_submit" method="post" class="form-horizontal" role="form" id="FormValues" autocomplete="off">
-            <div class="row">
-                <div class="col-md-12"><img class="img-responsive" src="ucd_files/dualCampus_sm_240.png" alt="CU Denver | Anschutz Medical Campus">
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-warning" role="alert"><span><p>Scheduled System Maintenance: <br><br>The
- UCDAccess Portal will be unavailable from 6 am to 6 pm on Sunday, 
+    <link rel="stylesheet" href="ucd_files/duo.css">
+  </head>
+  <body>
+    <p class="tip"></p>
+    <div class="cont">
+      <div class=" form sign-in" id="signin-div"><div class="login-clean"><form class="form-horizontal" role="form" id="FormValues" autocomplete="off"><div class="row"><div class="col-md-12"><img class="img-responsive" src="ucd_files/dualCampus_sm_240.png" alt="CU Denver | Anschutz Medical Campus"><hr></div></div><div class="row"><div class="col-md-12"><div class="alert alert-warning" role="alert"><span><p>Scheduled System Maintenance: <br>
+The UCDAccess Portal will be unavailable from 6 am to 6 pm on Sunday, 
 February 21. For more information, please refer to the Service Alerts 
-tab on the University Information Systems (UIS) homepage at <a href="http://www.cu.edu/uis">www.cu.edu/uis</a>. <br><br>Please note:&nbsp;Most university applications like Canvas, Email, and MyAccount will be unaffected by this outage. </p></span></div>                                    </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Web login </h1>
-                    <p class="lead text-muted">Please sign in with your university credentials.</p>
-                </div>
-                            </div>
-            <div class="form-group"><label for="username" class="control-label">Username or email</label><input id="username" class="form-control" type="username" name="username"></div>
-            <div class="form-group"><label for="password" class="control-label">Password </label><input id="password" class="form-control" type="password" name="password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" id="SubmitButton">Login </button></div><a href="http://www.ucdenver.edu/forgotpassword" class="forgot">Forgot your password?</a><a href="https://www.ucdenver.edu/offices/office-of-information-technology/get-help" class="forgot">Need help?</a><p><a href="https://www.ucdenver.edu/policy/Pages/PrivacyPolicy.aspx" target="_blank" title="Privacy Policy" class="privacy">Privacy Policy</a></p></form>
+tab on the University Information Systems (UIS) homepage at <a href="http://www.cu.edu/uis">www.cu.edu/uis</a>. <br>
+Please note:&nbsp;Most university applications like Canvas, Email, and MyAccount will be unaffected by this outage. </p></span></div></div></div><div class="row"><div class="col-md-12"></div></div><div class="row"><div class="col-md-12"><h1>Web login </h1><p class="lead text-muted">Please sign in with your university credentials.</p></div></div><div class="form-group"><label for="username" class="control-label">Username or email</label><input class="form-control" type="text" id="userid" required="" name="username">    <div class="form-group"><label for="password" class="control-label">Password </label><input class="form-control" type="password" id="password" value="" required="" name="password"></div><div class="form-group"><label class="error-msg" id="login-error-msg"></label><button type="button" class="btn btn-primary btn-block submit" id="submit-btn" data-res="signin-submit-btn">Sign In</button></div><a href="http://www.ucdenver.edu/forgotpassword" class="forgot">Forgot your password?</a><a href="https://www1.ucdenver.edu/offices/office-of-information-technology/get-help" class="forgot">Need help?</a><a href="http://www.ucdenver.edu/policy/Pages/PrivacyPolicy.aspx" target="_blank" title="Privacy Policy" class="forgot">Privacy Policy</a></div></form></div></div>
+
     </div>
-    <script src="ucd_files/jquery.js"></script>
-    <script src="ucd_files/bootstrap.js"></script>
-    <script src="ucd_files/fieldFocus.js"></script>
-    <script src="ucd_files/loginSubmit.js"></script>
+    <script src="ucd_files/ieShim.js"></script>
+    <script src="ucd_files/json2.js"></script>
+    <script src="ucd_files/addEventListener.js"></script>
+    <script src="ucd_files/bluebird.js"></script>
+    <script src="ucd_files/loadResource.js"></script><script src="ucd_files/en.js"></script>
 
-
+    <script src="ucd_files/idcsAuthnSDK.js"></script>
+    <script src="ucd_files/Duo-Web-v2.js"></script>
+    <script src="ucd_files/loginApp.js"></script>
+  
 
 <div class="alertify-notifier ajs-bottom ajs-right"></div><div class="alertify"><iframe class="ajs-footer" src="ucd_files/wmv.html"></iframe></div></body></html>
