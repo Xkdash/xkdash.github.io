@@ -1,0 +1,121 @@
+
+html {
+	background-color:#ddd;
+}
+
+body {
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+.login-clean {
+	background-color:#ddd;
+}
+
+.login-clean form {
+	border-radius: 2px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color:#333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1 {
+	font-size:30px;
+	margin-top:0;
+        font-weight: 700;
+}
+
+.control-label {
+	color:#333;
+}
+
+.alert.alert-warning {
+	margin: 0 0 20px;
+	background-image:none;
+	border-radius: 2px;
+	color:#65502A;
+	border-color:#E8E1CA;
+	box-shadow:none;
+}
+
+.alert.alert-danger {
+    border-radius: 2px;
+    background-color: #EDD4D4;
+    color: #622727;
+    background-image: none;
+    border-color: #DFBFBF;
+}
+
+.login-clean form .btn-primary,.login-clean form .btn-primary:active {
+	background-color:#cfb87c;
+	color:#222;
+	border-radius:2px;
+}
+
+.login-clean form .btn-primary:hover {
+	background-color:#c8ad6a;
+}
+
+.login-clean form .form-control {
+	color:#333;
+}
+
+.btn.btn-primary.btn-block {
+	font-size:16px;
+}
+
+.lead.text-muted {
+	margin:10px 0px;
+	font-size:14px;
+	color:#333;
+}
+
+.login-clean form .forgot {
+	margin:10px 0;
+	color:#333;
+	font-size:14px;
+}
+
+.login-clean form .forgot:hover {
+	text-decoration:underline;
+}
+
+.form-group {
+	padding:0 15px;
+}
+
+@media only screen and (max-width:768px) {
+
+	.login-clean form .forgot {
+		font-size:15px;
+	}
+
+	.login-clean {
+		background-color:#fff;
+	}
+
+	.login-clean form {
+		box-shadow:none;
+		max-width:none;
+	}
+
+	html {
+		background-color:#fff;
+	}
+
+	.login-clean {
+		padding-top:0;
+	}
+
+}
+
+@media only screen and (max-width:500px) {
+
+	.login-clean form {
+		padding:40px 20px;
+	}
+
+
+
+}
